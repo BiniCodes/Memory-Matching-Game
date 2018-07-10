@@ -1,15 +1,7 @@
 //Vanilla Javascript used to create a Memory Game
 
 //cards array to display memory card's icons
-const cardIcons = ["<i class ='far fa-hand-point-right'></i>",
-"<i class = 'far fa-hand-peace'></i>",
-"<i class = 'far fa-grin-stars'></i>",
-"<i class = 'far fa-grin-squint-tears'></i>",
-"<i class = 'far fa-hand-spock'></i>",
-"<i class = 'far fa-kiss-wink-heart'></i>",
-"<i class = 'far fa-thumbs-up'></i>",
-"<i class = 'far fa-grin-tongue-squint'></i>",
-"<i class = 'far fa-hand-point-right'></i>",
+const icons = ["<i class ='far fa-hand-point-right'></i>",
 "<i class = 'far fa-hand-peace'></i>",
 "<i class = 'far fa-grin-stars'></i>",
 "<i class = 'far fa-grin-squint-tears'></i>",
@@ -17,6 +9,9 @@ const cardIcons = ["<i class ='far fa-hand-point-right'></i>",
 "<i class = 'far fa-kiss-wink-heart'></i>",
 "<i class = 'far fa-thumbs-up'></i>",
 "<i class = 'far fa-grin-tongue-squint'></i>"];
+
+//Doubling the array
+const cardIcons = icons.concat(icons);
 
 //variables and arrays for the deck and OPENED and MACTHED cards
 const cardsDeck= document.querySelector(".deck");
@@ -27,7 +22,7 @@ let matchedCards = [];
 /* Shuffle function to shuffle cards of memory game
  From http://stackoverflow.com/a/2450976 */
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
