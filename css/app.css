@@ -167,9 +167,140 @@ h1 {
     font-weight: 20%;
 }
 
+/* RESPONSIVENESS: media query for mobile phones 
+min-width:0px , max-width: 780px */
+@media screen and (min-width: 0px) and (max-width: 780px){
 
-/* media query for Ipad / Tablet, min-width: 680px */
-@media screen and (min-width: 680px){
+    body {
+        background: #E3E2DF;
+        font-family: 'Coda', cursive;
+        color: #9A1750;
+        font-size: 80%;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    h1 {
+        font-family: 'Fascinate Inline', cursive;
+        font-weight: 200px;
+        font-size: 200%;
+        color: #4E4E50;
+        text-shadow: 3px 3px 5px #E3AFBC;
+        margin: 5px;
+    }
+
+    /*
+     * Styles for the deck of cards
+     */
+
+    .deck {
+        width: 300px;
+        min-height: 300px;
+        background: linear-gradient(160deg, #EE4C7C 0%, #9A1750 100%);
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 3em;
+    }
+
+    .deck .card {
+        height: 60px;
+        width: 60px;
+        background: #5D001E;
+        font-size: 0;
+        color: #E3E2DF;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+        margin: 0.4%;
+    }
+
+    .deck .card.show {
+        background-color: #E3E2DF;
+        font-size: 30px;
+    }
+
+    .deck .card.match {
+        cursor: default;
+        background: #E3AFBC;
+        font-size: 25px;
+    }
+
+    .deck .card.matchEffect {
+        transform: scale(0.8,0.8);
+        color: #8EE4AF;
+        font-size: 45px;
+        background-color: #EDF5E1;
+    }
+
+    .deck .card.noMatchEffect {
+        transform: scale(1.1,1.1);
+        animation: shake 0.3s infinite;
+        background-color: #C3073F;
+        color: #EDF5E1;
+
+    }
+
+    /*
+     * Styles for the Score Panel
+     */
+
+    .score-panel {
+        text-align: left;
+        width: 245px;
+        margin-bottom: 10px;
+    }
+
+    .score-panel .hearts {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        margin: 0 5px 0 0;
+    }
+
+    .score-panel .hearts li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .delStar {
+        color: #4E4E50;
+    }
+
+    .score-panel .timer {
+        margin-right: 4%;
+    }
+
+    .score-panel .fa-clock {
+        margin-left: 5%;
+     }
+
+    #playPause{
+        margin-right: 5%;
+    }
+
+    .restart , #playPause , .fa-clock{
+        font-size: 125%;
+    }
+}
+
+/* RESPONSIVENESS: media query for iPad / tablets
+min-width:460px , max-width: 780px */
+@media screen and (min-width: 460px) and (max-width: 780px){
 
     body {
         background: #E3E2DF;
@@ -183,8 +314,8 @@ h1 {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-right: 180px;
-        margin-left: 0px;
+        margin-right: 40px;
+        margin-left: 40px;
     }
 
     h1 {
@@ -201,8 +332,8 @@ h1 {
      */
 
     .deck {
-        width: 500px;
-        min-height: 340px;
+        width: 550px;
+        min-height: 550px;
         background: linear-gradient(160deg, #EE4C7C 0%, #9A1750 100%);
         padding: 32px;
         border-radius: 10px;
@@ -215,8 +346,8 @@ h1 {
     }
 
     .deck .card {
-        height: 95px;
-        width: 95px;
+        height: 105px;
+        width: 105px;
         background: #5D001E;
         font-size: 0;
         color: #E3E2DF;
