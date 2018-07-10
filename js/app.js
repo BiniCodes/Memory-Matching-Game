@@ -92,6 +92,9 @@ function increment(){
 
 //Add event listener to start/ pause button
 playPauseButton.addEventListener("click", startStopTimer, false);
+/*playPauseButton.onpause = function() {
+	alert('The game has been paused');
+};*/
 
 //Create the cards
 function createCards(){
@@ -147,7 +150,6 @@ function matchCards() {
 					currentCard.classList.remove("hovereffect");
 					openedCards.push(currentCard);
 			 }	 
-
 
 		 //Check if there is already an opened card
 		 let numOpenedCards = openedCards.length;
@@ -231,13 +233,54 @@ function isOver(){
 		//Get the time of the game when the game is over
 		let endTime = document.getElementById('timer').textContent;
 		console.log(endTime);
-		//Alert the message
-		alert("You won! \n " + "Your time was " + endTime +".\n" + " You have "+ hearts + " left.");
+		//Log the message
+		console.log("You won! \n " + "Your time was " + endTime +".\n" + " You have "+ hearts + " left.");
+		//Display model window
+		modalCall();
 		//Stop the timer when the game is over.
 		startStopTimer();
 		playPauseButton.removeEventListener("click", startStopTimer, false);
 		playPauseButton.classList.add("noPointer");
 	}
+}
+
+
+/* Modal window made with help of the following resourse:
+FROM: https://www.w3schools.com/howto/howto_css_modals.asp */
+
+// Variables for modal window
+const modal = document.getElementById('myModal');
+const close = document.getElementsByClassName("close")[0];
+const okay = document.getElementById('okay');
+const modalText = document.getElementById('modalText');
+
+// Function to call when to close the modal
+function closeModal(){
+	modal.style.display = "none";
+}
+
+//Event listener and function for closing X in the modal window
+close.addEventListener('click',closeModal,false);
+
+function modalCall(){
+	//Display the modal window
+	modal.style.display = "block";
+	//Add message to modal window
+	let hearts = finalRating();
+	let endTime = document.getElementById('timer').textContent;
+	modalText.innerHTML ="Congratulations, you won! " + "Your time was " + endTime + " ."+ " You have "+ hearts + " left.";
+	//Add click event listener to the 'Restart Game' button
+	okay.addEventListener('click',function(){
+		modal.style.display = "none";
+		restart();
+	});
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.addEventListener('click', function(e){
+	    if (e.target == modal) {
+	        modal.style.display = "none";
+	    }
+	});
 }
 
 //Add MOVE COUNTER

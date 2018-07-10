@@ -167,6 +167,61 @@ h1 {
     font-weight: 20%;
 }
 
+/*Styles for modal window */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 250px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #E3E2DF;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #9A1750;
+    width: 80%;
+    height: 60%;
+}
+
+/* The Close Button */
+.close {
+    color: #E3AFBC;
+    float: right;
+    font-size: 180%;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #9A1750;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#okay {
+    font-size: 70%;
+    font-family: 'Coda', cursive;
+    position: relative;
+    width: 20%;
+    border: 2px double #9A1750;
+    background-color: #E3AFBC;
+    cursor: pointer;
+}
+
+#modalText{
+    font-size: 150%;
+}
+
 /* RESPONSIVENESS: media query for mobile phones 
 min-width:0px , max-width: 780px */
 @media screen and (min-width: 0px) and (max-width: 780px){
@@ -296,6 +351,61 @@ min-width:0px , max-width: 780px */
     .restart , #playPause , .fa-clock{
         font-size: 125%;
     }
+
+/*Styles for modal window */
+/* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #E3E2DF;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #9A1750;
+        width: 80%;
+        height: 30%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #E3AFBC;
+        float: right;
+        font-size: 100%;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #9A1750;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #okay {
+        font-size: 70%;
+        font-family: 'Coda', cursive;
+        position: relative;
+        width: 50%;
+        border: 2px double #9A1750;
+        background-color: #E3AFBC;
+        cursor: pointer;
+    }
+
+    #modalText{
+        font-size: 80%;
+}
 }
 
 /* RESPONSIVENESS: media query for iPad / tablets
@@ -419,4 +529,60 @@ min-width:460px , max-width: 780px */
     .score-panel .fa-clock {
         margin-left: 2%;
     }
+
+    /*Styles for modal window */
+/* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 250px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #E3E2DF;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #9A1750;
+        width: 70%;
+        height: 50%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #E3AFBC;
+        float: right;
+        font-size: 200%;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #9A1750;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #okay {
+        font-size: 140%;
+        font-family: 'Coda', cursive;
+        position: relative;
+        width: 40%;
+        border: 2px double #9A1750;
+        background-color: #E3AFBC;
+        cursor: pointer;
+    }
+
+    #modalText{
+        font-size: 150%;
+    }
+
 }
